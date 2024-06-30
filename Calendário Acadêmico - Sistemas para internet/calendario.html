@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box
+        }
+
+        body {
+            font-family: "Lato", sans-serif;
+        }
+
+        /* Estiliza a aba */
+        .tab {
+            float: left;
+            border: 1px solid #ccc;
+            background-color: #cc0000;
+            width: 30%;
+            height: 900px;
+        }
+
+        /* Estiliza os botões dentro da aba */
+        .tab button {
+            display: block;
+            background-color: inherit;
+            color: white;
+            -webkit-text-stroke-width: 0.5px;
+            -webkit-text-stroke-color: #000;
+            padding: 22px 16px;
+            width: 100%;
+            border: none;
+            outline: none;
+            text-align: left;
+            cursor: pointer;
+            transition: 0.3s;
+            font-size: 20px;
+        }
+
+        /* Muda o fundo para as cores no hover */
+        .tab button:hover {
+            background-color: #ff3333;
+        }
+
+        /* cria o botão ativo da aba com  a classe "tab button" */
+        .tab button.active {
+            background-color: #ff0000;
+        }
+
+        /* Estiliza a aba */
+        .tabcontent {
+            float: left;
+            padding: 0px 12px;
+            border: 1px solid #ccc;
+            width: 70%;
+            border-left: none;
+            height: 900px;
+        }
+
+        .button-19 {
+            appearance: button;
+            background-color: #800000;
+            border: solid transparent;
+            border-radius: 16px;
+            border-width: 0 0 4px;
+            box-sizing: border-box;
+            color: #FFFFFF;
+            cursor: pointer;
+            display: inline-block;
+            font-family: din-round, sans-serif;
+            font-size: 15px;
+            font-weight: 700;
+            letter-spacing: .8px;
+            line-height: 20px;
+            margin: 0;
+            outline: none;
+            overflow: visible;
+            padding: 13px 16px;
+            text-align: center;
+            text-transform: uppercase;
+            touch-action: manipulation;
+            transform: translateZ(0);
+            transition: filter .2s;
+            user-select: none;
+            -webkit-user-select: none;
+            vertical-align: middle;
+            white-space: nowrap;
+            width: 50%;
+        }
+
+        .button-19:after {
+            background-clip: padding-box;
+            background-color: #990000;
+            border: solid transparent;
+            border-radius: 16px;
+            border-width: 0 0 4px;
+            bottom: -4px;
+            content: "";
+            left: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: -1;
+        }
+
+        .button-19:main,
+        .button-19:focus {
+            user-select: auto;
+        }
+
+        .button-19:hover:not(:disabled) {
+            filter: brightness(1.1);
+            -webkit-filter: brightness(1.1);
+        }
+
+        .button-19:disabled {
+            cursor: auto;
+        }
+    </style>
+    <title>Calendário Acadêmico</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <div style="float: right;"><img src="Calendário Acadêmico.png" width="100" alt="Logo" /></div>
+    <h1>Calendário Acadêmico</h1>
+    <p>Clique no mês que deseja visualizar</p>
+    <div class="tab">
+        <button class="tablinks" onclick="openCity(event, 'Janeiro')" id="defaultOpen">Janeiro</button>
+        <button class="tablinks" onclick="openCity(event, 'Fevereiro')">Fevereiro</button>
+        <button class="tablinks" onclick="openCity(event, 'Março')">Março</button>
+        <button class="tablinks" onclick="openCity(event, 'Abril')">Abril</button>
+        <button class="tablinks" onclick="openCity(event, 'Maio')">Maio</button>
+        <button class="tablinks" onclick="openCity(event, 'Junho')">Junho</button>
+        <button class="tablinks" onclick="openCity(event, 'Julho')">Julho</button>
+    </div>
+
+    <div id="Janeiro" class="tabcontent">
+        <h3>Janeiro</h3>
+        <ul>
+            <li>2/01 Término do prazo para requerimento de solicitação de Colação de Grau 2022/2</li>
+            <li style="color: red">6/01 Vencimento da 1ª parcela 2023/01 na 1ª faixa de desconto</li>
+            <li>17/01 a 28/02 Período para requerimento de revisão de nota do semestre 2022/2</li>
+            <li>25/01 a 31/01/2023 Semana de Planejamento</li>
+            <li>27/01 Lançamento do Edital de Monitoria 2023/1</li>
+            <li>30/01 Término do prazo para os Coordenadores de Curso cadastrarem os tutores no Sistema de Tutoria
+            </li>
+            <li>31/01 a 17/02 Período de inscrições para Monitoria 2023/1</li>
+            <li>31/01 Término do prazo regular para rematrícula 2023/1</li>
+            <li style="color: red">31/01 Término do prazo para pagamento da 1ª parcela 2023/1</li>
+        </ul>
+    </div>
+
+    <div id="Fevereiro" class="tabcontent">
+        <h3>Fevereiro</h3>
+        <ul>
+            <li>1 a 21/02 Período para requerimento do Regime de Acompanhamento</li>
+            <li>1 a 28/02 Período para requerimento de Reopção de Curso, Turno ou Unidade</li>
+            <li>1 a 4/02 Planejamento Pedagógico 2023/1 e Reuniões com o Núcleo Docente Estruturante por Curso</li>
+            <li>1 a 21/02 Período para requerimento de Mobilidade Acadêmica</li>
+            <li>1 a 24/02 Período para inscrição dos Cursos de Nivelamento de Português e Matemática</li>
+            <li>01/02 a 06/03 Período para requerimento de matrícula fora do prazo</li>
+            <li>1/02 a 06/03 Período para requerimento de trancamento da matrícula 2023/1</li>
+            <li>3/02 Data de divulgação dos resultados dos requerimentos de Colação de Grau (concluintes 2022/2)</li>
+            <li>3/02 Primeira reunião ordinaria do CONSUN - CONSELHO UNIVERSITÁRIO</li>
+            <li style="color: red">6/02 Vencimento da 2ª parcela 2022/1 na 1ª faixa de desconto</li>
+            <li>13/02 Início das aulas do semestre letivo 2023/1 (Veteranos e Calouros)</li>
+            <li>18/02 Atividade n°1 de complementação de carga-horária das disciplinas ministradas às Segundas-feiras
+            </li>
+            <li style="color: red">20/02 e 21/02 Recesso Acadêmico - Carnaval</li>
+            <li style="color: red">22/02 Recesso acadêmico - Quarta-feira de Cinzas</li>
+            <li>24/02 Término do prazo para os tutores cadastrarem o representante e vice de sala no Sistema de Tutoria
+                (Todos os Cursos)</li>
+            <li>25/02 Aplicação das Provas de Monitoria das disciplinas</li>
+            <li>25/02 Atividade n°1 de complementação de carga-horária das disciplinas ministradas às Terças-feiras</li>
+            <li style="color: red">28/02 Término do prazo para pagamento da 2ª parcela 2023/1</li>
+
+        </ul>
+    </div>
+
+    <div id="Março" class="tabcontent">
+        <h3>Março</h3>
+        <ul>
+            <li>4/03 Divulgação do resultado dos aprovados no processo seletivo para Monitoria de disciplinas</li>
+            <li>4/03 Término do prazo para requerimento de reingresso (Veteranos)</li>
+            <li>4/03 Atividade n°1 de complementação de carga-horária das disciplinas ministradas às Quartas-feiras</li>
+            <li>6 a 10/03 Período para os Monitores assinarem os termos de compromisso de Monitoria de disciplinas</li>
+            <li>6/03 Término do prazo para requerimento de ingresso por Transferência Externa e Portador de Diploma
+                2023/1</li>
+            <li>6/03 Término do prazo para ajuste de matrícula ALUNOS, CENTRAL DE ATENDIMENTO E COORDENAÇÃO DE CURSO
+                (adequação de carga horária e/ou de conteúdo, inclusão e/ou exclusão de disciplinas e solicitação de
+                quebra de pré-requisito)</li>
+            <li>6/03 Término do prazo para requerimento de matrícula fora do prazo</li>
+            <li>6/03 Término do prazo para requerimento de trancamento de matrícula 2023/1</li>
+            <li>6/03 Treinamento de ambientação para a plataforma AVA - Escola de Negógicios</li>
+            <li style="color: red">6/03 Vencimento da 3ª parcela 2023/1 na 1ª faixa de desconto</li>
+            <li>07/03 Processo de retenção para alunos que não renovaram matrícula 2023/1</li>
+            <li>10/03 Término do prazo para lançamento da frequência do mês de Fevereiro</li>
+            <li>10/03 Primeira reunião ordinaria do CONSEPE - Conselho Superior de Ensino Pesquisa e Extensão</li>
+            <li>11/03 Atividade n°1 de complementação de carga-horária das disciplinas ministradas às Quintas-feiras
+            </li>
+            <li>11/03 Inicio das Monitorias</li>
+            <li>11/03 Início dos cursos de nivelamento de Português e Matemática</li>
+            <li>13 a 18/03 Período de reunião de colegiado dos cursos de graduação</li>
+            <li>15/03 a 14/06 Período de Aplicação da Avaliação Institucional (CPA)</li>
+            <li>15/03 Start Game - Calourada Escola de Negócios</li>
+            <li>18/03 Atividade n°1 de complementação de carga-horária das disciplinas ministradas às Sextas-feiras</li>
+            <li>25/03 Atividade n°2 de complementação de carga-horária das disciplinas ministradas às Segundas-feiras
+            </li>
+            <li>25/03 Término do prazo para os professores de Trabalho de Conclusão de Curso (TCC) I e II validarem no
+                Sistema Acadêmico os termos de aceite.</li>
+            <li>21 à 23/03 Colação de Grau dos Concluíntes 2022/2</li>
+            <li>28/03 UNIALFA CULTURAL / AULA MAGNA UNIALFA</li>
+            <li>29/03 a 24/04 Período para inscrição do XXXVII Concurso Coca-Cola de Redação</li>
+            <li>31/03 Término do prazo para alunos concluintes requererem a documentação do Estágio Supervisionado.</li>
+            <li style="color: red">31/03 Término do prazo para pagamento da 3ª parcela 2023/1</li>
+        </ul>
+    </div>
+
+    <div id="Abril" class="tabcontent">
+        <h3>Abril</h3>
+        <ul>
+            <li>1/04 Atividade n°2 de complementação de carga-horária das disciplinas ministradas às Terças-feiras</li>
+            <li><strong>05/04 a 19/04 Período de Aplicação das Avaliações Formais de N1 para os Cursos de
+                    Engenharia</strong></li>
+            <li><strong>05/04 a 08/06 Período de solicitacão da prova substitutiva (N1 ou N2) das disciplinas
+                    Presenciais</strong></li>
+            <li style="color: red">6/04 Vencimento da 4ª parcela 2023/1 na 1ª faixa de desconto</li>
+            <li style="color: red">7/04 Feriado Nacional - Sexta-feira Santa</li>
+            <li style="color: red">8/04 Recesso Acadêmico</li>
+            <li>10/04 Término do prazo para lançamento da frequência de Março e entrega das pautas de Fevereiro e Março
+            </li>
+            <li><strong>13 a 19/04 Período de Aplicação das Avaliações Formais de N1 para os demais Cursos</strong></li>
+            <li>15/04 Atividade n°2 de complementação de carga-horária das disciplinas ministradas às Quartas-feiras
+            </li>
+            <li>26/04 Término do prazo para lançamento das notas N1 no sistema e entrega das atas de provas de N1 na
+                sala dos professores</li>
+            <li style="color: red">21/04 Feriado Nacional - Tiradentes</li>
+            <li style="color: red">22/04 Recesso Acadêmico</li>
+            <li>24 a 28/04 Período de realização de visitas técnicas - Escola de Negócios</li>
+            <li>27 e 28/04 Pré-Banca de TCC I - Arquitetura e Urbanismo</li>
+            <li>26/04 UNIALFA CULTURAL</li>
+            <li>29/04 Atividade n°2 de complementação de carga-horária das disciplinas ministradas às Quintas-feiras
+            </li>
+            <li>29/04 Realização do XXXVII Concurso Coca-Cola de Redação</li>
+            <li style="color: red">30/04 Término do prazo para pagamento da 4ª parcela 2023/1</li>
+        </ul>
+    </div>
+
+    <div id="Maio" class="tabcontent">
+        <h3>Maio</h3>
+        <ul>
+            <li style="color: red">1/05 Feriado Nacional - Dia do Trabalhador</li>
+            <li style="color: red">8/05 Vencimento da 5ª parcela 2023/1 na 1ª faixa de desconto</li>
+            <li>6/05 Atividade n°2 de complementação de carga-horária das disciplinas ministradas às Sextas-feiras</li>
+            <li>10/05 Término do prazo para lançamento e entrega da Pauta de Frequência do mês de Abril</li>
+            <li>12/05 Término do prazo para os docentes de TCC II enviarem ao NUPES a planilha de Comunicação de Sessão
+                de Defesa</li>
+            <li>13/05 Atividade n°3 de complementação de carga-horária das disciplinas ministradas às Segundas-feiras
+            </li>
+            <li>15 a 20/05 Período de reunião de colegiado dos cursos de graduação</li>
+            <li>16/05 a 19/06 Sessões Públicas de Defesas de TCCII (Todos os Cursos)</li>
+            <li>18/05 Resultado do XXXVII Concurso Coca-Cola de Redação</li>
+            <li>20/05 Atividade n°3 de complementação de carga-horária das disciplinas ministradas às Terças-feiras</li>
+            <li>22 a 31/05 Projeto Unialfa Social - Escola de Negócios</li>
+            <li style="color: red">24/05 Feriado Municipal - Padroeira de Goiânia</li>
+            <li><strong>25/05 a 07/06 Período de Aplicação das Avaliações Formais N2 para os Cursos de
+                    Engenharia</strong></li>
+            <li>25/05 e 26/05 Defesa TCC II Arquitetura e Urbanismo</li>
+            <li>27/05 Atividade n°3 de complementação de carga-horária das disciplinas ministradas às Quartas-feiras
+            </li>
+            <li>30/05 Segunda reunião ordinaria do CONSUN - CONSELHO UNIVERSITÁRIO</li>
+            <li style="color: red">31/05 Término do prazo para pagamento da 5ª parcela 2023/1</li>
+        </ul>
+    </div>
+
+    <div id="Junho" class="tabcontent">
+        <h3>Junho</h3>
+        <ul>
+            <li>1/06 a 31/07 Período para rematrícula 2023/2</li>
+            <li><strong>1 a 7/06 Período de Aplicação das Avaliações Formais N2 para os demais Cursos</strong></li>
+            <li>3/06 Atividade n°3 de complementação de carga-horária das disciplinas ministradas às Quintas-feiras</li>
+            <li style="color: red">6/06 Vencimento da 6ª parcela 2023/1 na 1ª faixa de desconto</li>
+            <li><strong>7/06 Término do prazo para solicitação e pagamento da taxa da Avaliação Substitutiva das
+                    disciplinas presenciais na Central de Atendimento</strong></li>
+            <li>9/06 Término do prazo para lançamento e entrega da Pauta de Frequência do mês de Maio</li>
+            <li>9/06 Segunda reunião ordinaria do CONSEPE - Conselho Superior de Ensino Pesquisa e Extensão</li>
+            <li style="color: red">8/06 Feriado Nacional - Corpus Christi</li>
+            <li><strong>12 à 23/06 Período de Aplicação das Avaliações Formais N2 das Disciplinas EaD.</strong></li>
+            <li><strong>10/06 Aplicação da Avaliação Substitutiva (N1 ou N2) disciplinas Presenciais</strong></li>
+            <li>10/06 Atividade n°3 de complementação de carga-horária das disciplinas ministradas às Sextas-feiras</li>
+            <li>12 e 13/06 Jornada de Negógicios - Escola de Negócios (Cine - Escola de Negócios / Feiras de Sabores /
+                Custos)</li>
+            <li>12 e 16/06 Período de realização de visitas técnicas - Escola de Negócios</li>
+            <li>14/06 Pich NPE / Núcleo de Práticas - Escola de Negócios</li>
+            <li>14/06 Término do prazo para lançamento das notas N2 no sistema e entrega das atas de prova de N2 na sala
+                dos professores</li>
+            <li>15 e 16/06 Hack Negócios - Escola de Negócios</li>
+            <li>17/06 Atividade n°4 de complementação de carga-horária das disciplinas ministradas às Segundas-feiras
+            </li>
+            <li>26/06 a 09/07 Período para requerimento da Colação de Grau Concluintes 2023/1</li>
+            <li>20/06 Término do prazo para realização das Sessões Públicas de Defesas de TCCII (Todos os Cursos)</li>
+            <li><strong>15/06 a 21/06 Período de Aplicação das Avaliações N3</strong></li>
+            <li>19 a 23/06 Período de reunião de NDE dos cursos de graduação</li>
+            <li>23/06 Término do prazo para os concluintes (2023/1), entregarem as atividades complementares (Todos os
+                Cursos)</li>
+            <li>22/06 e 23/06 Defesa TCC I ArqUrb
+            <li>23/06 Caminhada da Fé (Festa de Trindade)</li>
+            <li>23/06 Término do prazo para as Coordenações lançarem as notas de estágio supervisionado (Todos os
+                Cursos)</li>
+            <li>23/06 Término do prazo para os professores de TCC e orientadores, entregarem no NUPES (Núcleo de
+                Pesquisa): Ata de sessão de defesa de TCC e o cronograma
+                de orientação de TCC</li>
+            <li>24/06 Término do prazo para lançamento das notas N3 no sistema e entrega das atas de prova de N3 na sala
+                dos professores</li>
+            <li>24/06 Atividade n°4 de complementação de carga-horária das disciplinas ministradas às Terças-feiras</li>
+            <li><strong>22/06 a 28/06 Período de Aplicação das Avaliações N4<strong></li>
+            <li>30/06 Término do prazo para orientandos entregarem no NUPES (Núcleo de Pesquisa) o TCC impresso e os
+                documentos referentes ao TCC</li>
+            <li>30/06 Término do prazo para lançamento das notas e finalização dos Processos de Regime de Acompanhamento
+                e Mobilidade Acadêmica</li>
+            <li style="color: red">30/06 Término do prazo para pagamento da 6ª parcela 2023/1</li>
+            <li>29/06 Término do prazo para lançamento das notas de N4; entrega das atas de prova de N4 e Sumário de
+                Notas</li>
+            <li>29/06 Término do prazo para lançamento e entrega da Pauta de Frequência do mês de Junho</li>
+            <li>29/06 Término do prazo para entrega à Secretaria dos processos de Regime de Acompanhamento e Mobilidade
+                Acadêmica finalizados</li>
+            <li><strong>30/06 Encerramento do Semestre Letivo</strong></li>
+        </ul>
+    </div>
+
+    <div id="Julho" class="tabcontent">
+        <h3>Julho</h3>
+        <ul>
+            <li>1/06 a 31/07 Período para rematrícula 2023/2</li>
+            <li>5/07 a 19/07 Período de recesso escolar</li>
+            <li style="color: red">6/07 Vencimento da 1ª parcela 2023/2 na 1ª faixa de desconto</li>
+            <li>9/07 Término do prazo para requerimento da Colação de Grau Concluintes 2023/1</li>
+            <li style="color: red">31/07 Término do prazo para pagamento da 1ª parcela 2023/2</li>
+
+        </ul>
+    </div>
+
+    <script>
+        function openCity(evt, cityName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+        // Obtem os elemntos com id="defaultOpen" e clicar
+        document.getElementById("defaultOpen").click();
+    </script>
+
+    <form action="home.html">
+        <button class="button-19" role="button">
+            Voltar para página inicial
+        </button>
+</body>
+
+</html>
