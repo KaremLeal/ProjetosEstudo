@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login/Cadastro Calendário Acadêmico</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+
+  h2 {
+    color: darkblue;
+  }
+
+  input,
+  button {
+    margin: 10px;
+  }
+
+  #cadastro,
+  #login {
+    width: 300px;
+    margin: 0 auto;
+    border: 1px solid #333;
+    padding: 20px;
+    margin-top: 50px;
+  }
+</style>
+
+<body>
+  <h1 style="color: #4d0000; text-align: center;">Cadastro e Login Calendário Acadêmico</h1>
+  <img src="Calendario Academico transparente.png" width="500" alt="Logo" style="float: right;"/>
+
+  <div id="cadastro">
+    <h2>Cadastro</h2>
+    <input type="text" id="cadastroMatricula" placeholder="Matricula">
+    <input type="email" id="cadastroEmail" placeholder="Email">
+    <input type="password" id="cadastroSenha" placeholder="Senha">
+    <button onclick="cadastrar()">Cadastrar</button>
+  </div>
+
+  <div id="login">
+    <h2>Login</h2>
+    <input type="email" id="loginEmail" placeholder="Email">
+    <input type="password" id="loginSenha" placeholder="Senha">
+    <button onclick="entrar()">Entrar</button>
+  </div>
+</html>
